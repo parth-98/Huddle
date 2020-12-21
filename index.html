@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon-32x32.png">
     <title>Huddle</title>
 </head>
 
@@ -31,9 +32,9 @@
                         Build The Community Your Fans Will Love
                     </h2>
                     <p class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, accusamus excepturi illo
-                        obcaecati velit, itaque quidem provident harum ad impedit nobis. At doloribus inventore ex quis
-                        quasi porro? Impedit iure ipsum hic dignissimos soluta.
+                        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with
+                        your users as you engage in genuine discussion.
+
                     </p>
                     <a href="#" class="btn-pink">Get Started For Free
                     </a>
@@ -68,8 +69,8 @@
             <div class="section-common">
                 <div class="section-content">
                     <h2 class="content-title">Grow Toghether</h2>
-                    <p class="content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptate
-                        mollitia suscipit autem distinctio, rem repellendus cum sapiente.</p>
+                    <p class="content-desc">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful
+                    conversations you miss out on with a feedback form.</p>
                 </div>
                 <div class="section-image">
                     <img src="images/illustration-grow-together.svg">
@@ -86,8 +87,9 @@
                 </div>
                 <div class="section-content">
                     <h2 class="content-title">Flowing Conversation</h2>
-                    <p class="content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptate
-                        mollitia suscipit autem distinctio, rem repellendus cum sapiente.</p>
+                    <p class="content-desc">You wouldn't paginate a conversations in real life, so why do it online? Our threds have just-in-time loading for a more
+                    natural flow.
+</p>
                 </div>
             </div>
         </div>
@@ -97,8 +99,8 @@
             <div class="section-common">
                 <div class="section-content">
                     <h2 class="content-title">Your Users</h2>
-                    <p class="content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptate
-                        mollitia suscipit autem distinctio, rem repellendus cum sapiente.</p>
+                    <p class="content-desc">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your
+                    app, your user can start chatting immediately.</p>
                 </div>
                 <div class="section-image">
                     <img src="images/illustration-your-users.svg">
@@ -121,11 +123,10 @@
             <div class="footer-box">
                 <div class="footer-items">
                     <div class="footer-info">
-                        <img src="images/logo.svg">
-                        <p class="footer-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab reiciendis
-                            ullam tempora odit
-                            earum
-                            dolore?</p>
+                        <img src="images/logo-footer.svg">
+                        <p class="footer-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultices quis
+                        sem.
+</p>
                     </div>
                     <div class="footer-phone-icon icon">
                         <h4 class="contact-data">Phone: +1-543-123-4567</h4>
@@ -134,9 +135,9 @@
                         <h4 class="contact-data">example@huddle.com</h4>
                     </div>
                     <div class="footer-social-icon">
-                        <img class="social-icon" src="images/facebook-square-brands.svg">
-                        <img class="social-icon" src="images/instagram-brands.svg">
-                        <img class="social-icon" src="images/twitter-square-brands.svg">
+                        <img class="social-icon fb-icon" src="images/facebook-square-brands.svg">
+                        <img class="social-icon insta-icon" src="images/instagram-brands.svg">
+                        <img class="social-icon twit-icon" src="images/twitter-square-brands.svg">
 
                     </div>
 
@@ -144,15 +145,53 @@
                 <div class="footer-contact">
                     <h3>newsletter</h3>
                     <p class="footer-desc">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eaque deleniti, error eos optio
-                        facilis?
+                        To recieve tips on how to grow your community, sign up to our weekly newsletter. We'll never send you spam or pass on
+                        your email address
                     </p>
-                    <input placeholder="" type="text">
-                    <a href="#" class="btn-subscribe btn-pink">Subscribe</a>
+                    <input class="email-input" placeholder="" type="text">
+                    <span class="email-validate">Enter valid Email id</span>
+                    <button href="" class="btn-subscribe btn-pink">Subscribe</button>
                 </div>
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.fb-icon').mouseover(function () {
+                this.src = 'images/facebook-blue.svg'
+            })
+            $('.fb-icon').mouseout(function () {
+                this.src = 'images/facebook-square-brands.svg'
+            })
+            $('.insta-icon').mouseover(function () {
+                this.src = 'images/instagram-blue.svg'
+            })
+            $('.insta-icon').mouseout(function () {
+                this.src = 'images/instagram-brands.svg'
+            })
+            $('.twit-icon').mouseover(function () {
+                this.src = 'images/twitter-blue.svg'
+            })
+            $('.twit-icon').mouseout(function () {
+                this.src = 'images/twitter-square-brands.svg'
+            })
+            $('.btn-subscribe').click(function () {
+                email_validate();
+            })
+        })
+        function email_validate() {
+            var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var email = $('.email-input').val();
+
+            if (email == '' && pattern.test(email)) {
+                $('.email-validate').css('display', 'block');
+            } else {
+                $('.email-validate').css('display', 'none');
+
+            }
+        }
+    </script>
 </body>
 
 </html>
